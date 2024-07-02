@@ -23,6 +23,8 @@ JavaScript
 - Manipulação e gestão dos dados
     - Conversão de dados
 
+Algoritmo
+- sequência de passos lógica e finita para resolução de um problema
 
 Fases da resolução de um problema
 01. Coletar os dados

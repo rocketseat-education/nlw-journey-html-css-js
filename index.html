@@ -6,13 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLW - Journey</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>dayjs.locale('pt-br')</script>
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1> Atividades </h1>
-    <section></section>
+    <form onsubmit="salvarAtividade(event)">
+        <div>
+            <input type="text" placeholder="Qual a atividade?" name="atividade" required>
+        </div>
 
+        <div>
+            <select name="dia">
+                <option value="2024-03-01">01 de feveiro</option>
+            </select>
+        </div>
+
+        <div>
+            <select name="hora">
+                <option value="10:30">10:30</option>
+            </select>
+        </div>
+        
+        <button>Salvar atividade</button>
+    </form>
+
+    <main>
+        <h1> Atividades </h1>
+        <section></section>
+    </main>
     <script src="./script.js"></script>
 </body>
+
 </html>
