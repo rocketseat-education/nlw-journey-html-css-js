@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLW - Journey</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
     <script>dayjs.locale('pt-br')</script>
@@ -15,31 +19,85 @@
 </head>
 
 <body>
-    <form onsubmit="salvarAtividade(event)">
-        <div>
-            <input type="text" placeholder="Qual a atividade?" name="atividade" required>
-        </div>
+    <div id="app">
+        <form onsubmit="salvarAtividade(event)">
 
-        <div>
-            <select name="dia">
-                <option value="2024-03-01">01 de feveiro</option>
-            </select>
-        </div>
+            <div id="place" class="card-bg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.6668 8.33329C16.6668 13.3333 10.0002 18.3333 10.0002 18.3333C10.0002 18.3333 3.3335 13.3333 3.3335 8.33329C3.3335 6.56518 4.03588 4.86949 5.28612 3.61925C6.53636 2.36901 8.23205 1.66663 10.0002 1.66663C11.7683 1.66663 13.464 2.36901 14.7142 3.61925C15.9645 4.86949 16.6668 6.56518 16.6668 8.33329Z"
+                        stroke="#A1A1AA"
+                        style="stroke:#A1A1AA;stroke:color(display-p3 0.6314 0.6314 0.6667);stroke-opacity:1;"
+                        stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M10.0002 10.8333C11.3809 10.8333 12.5002 9.714 12.5002 8.33329C12.5002 6.95258 11.3809 5.83329 10.0002 5.83329C8.61945 5.83329 7.50016 6.95258 7.50016 8.33329C7.50016 9.714 8.61945 10.8333 10.0002 10.8333Z"
+                        stroke="#A1A1AA"
+                        style="stroke:#A1A1AA;stroke:color(display-p3 0.6314 0.6314 0.6667);stroke-opacity:1;"
+                        stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
-        <div>
-            <select name="hora">
-                <option value="10:30">10:30</option>
-            </select>
-        </div>
-        
-        <button>Salvar atividade</button>
-    </form>
+                Florianópolis, SC
+            </div>
 
-    <main>
-        <h1> Atividades </h1>
-        <section></section>
-    </main>
-    <script src="./script.js"></script>
+            <div class="fields">
+                <div class="field-wrapper">
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.4882 2.15502C10.1757 1.84244 9.75183 1.66678 9.30984 1.66669H3.33317C2.89114 1.66669 2.46722 1.84228 2.15466 2.15484C1.8421 2.4674 1.6665 2.89133 1.6665 3.33335V9.31002C1.6666 9.75201 1.84225 10.1759 2.15484 10.4884L9.40817 17.7417C9.78693 18.1181 10.2992 18.3293 10.8332 18.3293C11.3671 18.3293 11.8794 18.1181 12.2582 17.7417L17.7415 12.2584C18.1179 11.8796 18.3291 11.3673 18.3291 10.8334C18.3291 10.2994 18.1179 9.78712 17.7415 9.40835L10.4882 2.15502Z"
+                            stroke="#A1A1AA"
+                            style="stroke:#A1A1AA;stroke:color(display-p3 0.6314 0.6314 0.6667);stroke-opacity:1;"
+                            stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M6.24984 6.66669C6.47996 6.66669 6.6665 6.48014 6.6665 6.25002C6.6665 6.0199 6.47996 5.83335 6.24984 5.83335C6.01972 5.83335 5.83317 6.0199 5.83317 6.25002C5.83317 6.48014 6.01972 6.66669 6.24984 6.66669Z"
+                            stroke="#A1A1AA"
+                            style="stroke:#A1A1AA;stroke:color(display-p3 0.6314 0.6314 0.6667);stroke-opacity:1;"
+                            stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <input type="text" placeholder="Qual a atividade?" name="atividade" required>
+                </div>
+
+                <div class="field-wrapper">
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.66667 1.66669V5.00002M13.3333 1.66669V5.00002M2.5 8.33335H17.5M4.16667 3.33335H15.8333C16.7538 3.33335 17.5 4.07955 17.5 5.00002V16.6667C17.5 17.5872 16.7538 18.3334 15.8333 18.3334H4.16667C3.24619 18.3334 2.5 17.5872 2.5 16.6667V5.00002C2.5 4.07955 3.24619 3.33335 4.16667 3.33335Z"
+                            stroke="#A1A1AA"
+                            style="stroke:#A1A1AA;stroke:color(display-p3 0.6314 0.6314 0.6667);stroke-opacity:1;"
+                            stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <select name="dia">
+                        <option value="2024-03-01">01 de fevereiro</option>
+                    </select>
+                </div>
+
+                <div class="field-wrapper">
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.99984 5.00002V10L13.3332 11.6667M18.3332 10C18.3332 14.6024 14.6022 18.3334 9.99984 18.3334C5.39746 18.3334 1.6665 14.6024 1.6665 10C1.6665 5.39765 5.39746 1.66669 9.99984 1.66669C14.6022 1.66669 18.3332 5.39765 18.3332 10Z"
+                            stroke="#A1A1AA"
+                            style="stroke:#A1A1AA;stroke:color(display-p3 0.6314 0.6314 0.6667);stroke-opacity:1;"
+                            stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <select name="hora">
+                        <option value="10:30">10:30</option>
+                    </select>
+                </div>
+            </div>
+
+            <button>Salvar atividade</button>
+        </form>
+
+        <main>
+            <h1> Atividades </h1>
+            <section></section>
+        </main>
+        <script src="./script.js"></script>
+    </div>
 </body>
 
 </html>
